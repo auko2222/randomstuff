@@ -1,0 +1,433 @@
+{
+  "site": {
+    "title": "Lisette — Portfolio",
+    "description": "A collection of creative work.",
+    "fonts": {
+      "body": "Inter Tight",
+      "heading": "Inter Tight",
+      "display": "Archivo Black"
+    },
+    "nav": {
+      "show": true,
+      "items": [
+        {
+          "label": "Home",
+          "link": "home"
+        },
+        {
+          "label": "About",
+          "link": "about"
+        },
+        {
+          "label": "Work",
+          "link": "work"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "theme": "paper",
+      "blocks": [
+        {
+          "type": "poster",
+          "eyebrow": "TURNING IDEAS INTO VISUALS.",
+          "subtitle": "GRAPHIC DESIGNER",
+          "title": "*PORTFOLIO*",
+          "footer": [
+            "LISETTE",
+            "Graphic Designer",
+            "",
+            "2026"
+          ],
+          "tabs": [
+            {
+              "label": "Editorial Design",
+              "link": "editorial-design",
+              "x": 12,
+              "y": 28
+            },
+            {
+              "label": "Social Media",
+              "link": "social-media",
+              "x": 30,
+              "y": 33
+            },
+            {
+              "label": "Branding",
+              "link": "branding",
+              "x": 67,
+              "y": 35
+            },
+            {
+              "label": "Event Graphics",
+              "link": "event-graphics",
+              "x": 74,
+              "y": 76
+            },
+            {
+              "label": "About",
+              "link": "about",
+              "x": 20,
+              "y": 72
+            },
+            {
+              "label": "All Work",
+              "link": "work",
+              "x": 84,
+              "y": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "theme": "light",
+      "blocks": [
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "align": "center",
+              "sections": [
+                {
+                  "heading": "Lisette",
+                  "size": "l",
+                  "list": [
+                    "Lorem, Ipsum",
+                    "Dolor Sit Amet",
+                    "000 000 0000",
+                    "hello@example.com"
+                  ],
+                  "muted": true
+                }
+              ]
+            },
+            {
+              "sections": [
+                {
+                  "heading": "About me",
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+                  "textSize": "l"
+                },
+                {
+                  "heading": "Education",
+                  "list": [
+                    "Lorem Ipsum [Dolor, Sit Amet, Consectetur]",
+                    "Adipiscing elit sed do [Eiusmod, Tempor, Incididunt]"
+                  ],
+                  "muted": true
+                },
+                {
+                  "heading": "Experience",
+                  "list": [
+                    "Lorem Ipsum Designer    [Dolor / Sit Amet Practice]"
+                  ],
+                  "muted": true
+                }
+              ]
+            },
+            {
+              "sections": [
+                {
+                  "heading": "Skills",
+                  "list": [
+                    "Lorem Ipsum & Dolor Sit Amet",
+                    "Consectetur Design",
+                    "Adipiscing Elit",
+                    "Sed Do Eiusmod",
+                    "Tempor & Incididunt",
+                    "Ut Labore Editing",
+                    "Dolore Magna",
+                    "Aliqua Design & Development",
+                    "Enim Ad Minim",
+                    "Veniam, Quis & Nostrud"
+                  ]
+                },
+                {
+                  "heading": "Softwares",
+                  "list": [
+                    "Lorem Suite [Ipsum, Dolor, Sit, Amet etc]",
+                    "Consectetur",
+                    "Adipiscing",
+                    "Elit Sed Pro",
+                    "Do Eiusmod",
+                    "Tempor",
+                    "Incididunt Suite",
+                    "Labore",
+                    "Dolore Magna Platforms [Aliqua, Enim, Minim]",
+                    "Veniam",
+                    "Quis Nostrud"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "work",
+      "title": "Work",
+      "theme": "white",
+      "blocks": [
+        {
+          "type": "topbar",
+          "left": "A collection of creative work for the bold & wonderful",
+          "right": "07 Apr, 2026"
+        },
+        {
+          "type": "display",
+          "text": "What you will\nfind inside?",
+          "italic": true,
+          "weight": 300
+        },
+        {
+          "type": "spacer",
+          "size": "l"
+        },
+        {
+          "type": "linklist",
+          "items": [
+            {
+              "label": "Brand Design",
+              "link": "branding"
+            },
+            {
+              "label": "Creative Direction",
+              "link": "editorial-design"
+            },
+            {
+              "label": "Logo Design",
+              "link": "social-media"
+            },
+            {
+              "label": "Event Graphics",
+              "link": "event-graphics"
+            }
+          ]
+        },
+        {
+          "type": "spacer",
+          "size": "l"
+        }
+      ]
+    },
+    {
+      "slug": "branding",
+      "title": "Branding",
+      "theme": "dark",
+      "blocks": [
+        {
+          "type": "project",
+          "title": ".lorem ipsum",
+          "label": "[ project 2026 ]",
+          "tags": [
+            "branding.",
+            "website design.",
+            "photography.",
+            "packaging design."
+          ],
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "note": "Lorem Ipsum Graduation Project"
+        },
+        {
+          "type": "image",
+          "src": "",
+          "alt": "Hero mockup",
+          "width": "full"
+        },
+        {
+          "type": "gallery",
+          "columns": 2,
+          "images": [
+            {
+              "src": "",
+              "alt": "Mockup 1"
+            },
+            {
+              "src": "",
+              "alt": "Mockup 2"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "",
+          "alt": "Wide mockup",
+          "width": "full"
+        },
+        {
+          "type": "gallery",
+          "columns": 3,
+          "images": [
+            {
+              "src": "",
+              "alt": "Detail 1"
+            },
+            {
+              "src": "",
+              "alt": "Detail 2"
+            },
+            {
+              "src": "",
+              "alt": "Detail 3"
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "label": "← Back to all work",
+          "link": "work",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "slug": "editorial-design",
+      "title": "Editorial Design",
+      "theme": "dark",
+      "blocks": [
+        {
+          "type": "project",
+          "title": ".dolor sit",
+          "label": "[ project 2026 ]",
+          "tags": [
+            "editorial.",
+            "layout.",
+            "typography.",
+            "print."
+          ],
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+          "note": "Lorem Ipsum Magazine"
+        },
+        {
+          "type": "image",
+          "src": "",
+          "alt": "Spread mockup",
+          "width": "full"
+        },
+        {
+          "type": "gallery",
+          "columns": 2,
+          "images": [
+            {
+              "src": "",
+              "alt": "Mockup 1"
+            },
+            {
+              "src": "",
+              "alt": "Mockup 2"
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "label": "← Back to all work",
+          "link": "work",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "slug": "social-media",
+      "title": "Social Media",
+      "theme": "dark",
+      "blocks": [
+        {
+          "type": "project",
+          "title": ".amet studio",
+          "label": "[ project 2025 ]",
+          "tags": [
+            "social media.",
+            "campaign.",
+            "motion.",
+            "content."
+          ],
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "note": "Lorem Ipsum Client"
+        },
+        {
+          "type": "gallery",
+          "columns": 3,
+          "images": [
+            {
+              "src": "",
+              "alt": "Post 1"
+            },
+            {
+              "src": "",
+              "alt": "Post 2"
+            },
+            {
+              "src": "",
+              "alt": "Post 3"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "",
+          "alt": "Campaign mockup",
+          "width": "full"
+        },
+        {
+          "type": "button",
+          "label": "← Back to all work",
+          "link": "work",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "slug": "event-graphics",
+      "title": "Event Graphics",
+      "theme": "dark",
+      "blocks": [
+        {
+          "type": "project",
+          "title": ".consectetur fest",
+          "label": "[ project 2025 ]",
+          "tags": [
+            "event.",
+            "signage.",
+            "posters.",
+            "merch."
+          ],
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "note": "Lorem Ipsum Festival"
+        },
+        {
+          "type": "image",
+          "src": "",
+          "alt": "Poster mockup",
+          "width": "full"
+        },
+        {
+          "type": "gallery",
+          "columns": 2,
+          "images": [
+            {
+              "src": "",
+              "alt": "Signage"
+            },
+            {
+              "src": "",
+              "alt": "Merch"
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "label": "← Back to all work",
+          "link": "work",
+          "align": "center"
+        }
+      ]
+    }
+  ]
+}

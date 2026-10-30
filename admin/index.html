@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Site editor</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="bar">
+    <strong class="brand">Site editor</strong>
+    <div class="bar-mid">
+      <label class="sr" for="page-select">Page</label>
+      <select id="page-select"></select>
+      <button id="btn-new-page" class="ghost">+ New page</button>
+    </div>
+    <div class="bar-right">
+      <button id="btn-undo" class="ghost" title="Undo (Ctrl+Z)">Undo</button>
+      <button id="btn-device" class="ghost" title="Toggle phone preview">Phone view</button>
+      <button id="btn-settings" class="ghost">Settings</button>
+      <a id="btn-view" class="ghost btn-like" href="../" target="_blank" rel="noopener">View site ↗</a>
+      <span id="status" class="status"></span>
+      <button id="btn-publish" class="primary">Publish</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="panel" class="panel"></aside>
+    <section class="preview-wrap">
+      <iframe id="preview" title="Preview" src="../index.html?preview=1"></iframe>
+    </section>
+  </div>
+
+  <dialog id="dlg-settings">
+    <form method="dialog" class="dlg">
+      <h2>Settings</h2>
+      <div id="settings-body"></div>
+      <div class="dlg-actions"><button class="primary" value="ok">Done</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="dlg-page">
+    <form method="dialog" class="dlg" id="new-page-form">
+      <h2>New page</h2>
+      <label>Page name<input name="title" required placeholder="e.g. Packaging Design"></label>
+      <label>Start from
+        <select name="template">
+          <option value="project">Project (title, tags, description + image holders)</option>
+          <option value="text">Text page</option>
+          <option value="blank">Blank</option>
+        </select>
+      </label>
+      <label>Background
+        <select name="theme">
+          <option value="dark">Black</option>
+          <option value="light">Off-white</option>
+          <option value="white">White</option>
+          <option value="paper">Paper texture</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" name="tab" checked> Add a tab for it on the homepage</label>
+      <label class="check"><input type="checkbox" name="list" checked> Add it to the list on the Work page</label>
+      <div class="dlg-actions">
+        <button value="cancel" formnovalidate class="ghost">Cancel</button>
+        <button value="create" class="primary">Create page</button>
+      </div>
+    </form>
+  </dialog>
+
+  <datalist id="fonts-list"></datalist>
+  <datalist id="links-list"></datalist>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
