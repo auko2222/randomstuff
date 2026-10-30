@@ -25,8 +25,12 @@
         { key: "title", label: "Big title", type: "text" },
         { key: "font", label: "Big title font (empty = Display font from Settings)", type: "font" },
         { key: "footer", label: "Lines under the title (one per line)", type: "lines" },
+        { row: [
+          { key: "scrollCue", label: "Scroll hint at the bottom", type: "text" },
+          { key: "scrollCueLink", label: "Hint goes to", type: "link" },
+        ] },
         { key: "tabs", label: "Tabs", type: "items", itemName: "Tab", summary: (t) => t.label,
-          make: () => ({ label: "New tab", link: "work", x: 20 + Math.round(Math.random() * 60), y: 25 + Math.round(Math.random() * 50) }),
+          make: () => ({ label: "New tab", link: "home#works", x: 20 + Math.round(Math.random() * 60), y: 25 + Math.round(Math.random() * 50) }),
           fields: [
             { key: "label", label: "Label", type: "text" },
             { key: "link", label: "Goes to (page or URL)", type: "link" },
@@ -54,7 +58,8 @@
                 { key: "textSize", label: "Paragraph size", type: "select", options: ["m", "l"], labels: ["Normal", "Large"] },
                 { key: "list", label: "List (one item per line)", type: "lines" },
                 { key: "muted", label: "Grey text for the list", type: "check" },
-                { key: "image", label: "Image (optional)", type: "image" },
+                { key: "imageHolder", label: "Show a framed image above the heading", type: "check" },
+                { key: "image", label: "Framed image", type: "image" },
               ] },
           ] },
       ],
@@ -157,6 +162,8 @@
   const undoStack = [];
   let gh = Object.assign({}, window.ADMIN_DEFAULTS || {}, JSON.parse(store.get(GH_KEY) || "{}"));
 
+  // Every block can be given a section name, so links like "home#works" or "#about" can scroll to it.
+  const ANCHOR_FIELD = { key: "anchor", label: "Section name for links (optional, e.g. about)", type: "text" };
   const page = () => content.pages.find((p) => p.slug === pageSlug) || content.pages[0];
 
   /* ---------- Status / saving ---------- */
@@ -206,7 +213,7 @@
     sendPreview();
     // Follow clicks inside the preview so the editor shows the page being looked at.
     iframe.contentWindow.addEventListener("hashchange", () => {
-      const slug = decodeURIComponent(iframe.contentWindow.location.hash.replace(/^#\/?/, "")) || "home";
+      const slug = decodeURIComponent(iframe.contentWindow.location.hash.replace(/^#\/?/, "")).split("/")[0] || "home";
       if (slug !== pageSlug && content.pages.some((p) => p.slug === slug)) { pageSlug = slug; renderPageSelect(); renderPanel(); }
     });
   });
@@ -411,7 +418,7 @@
       slugWrap.querySelector("input").onchange = (e) => renameSlug(p, e.target.value);
       pb.appendChild(slugWrap);
     }
-    pb.appendChild(fieldEl(p, { key: "theme", label: "Background", type: "select", options: ["dark", "light", "white", "paper"], labels: ["Black", "Off-white", "White", "Paper texture"] }));
+    pb.appendChild(fieldEl(p, { key: "theme", label: "Background", type: "select", options: ["paper", "light", "white", "dark"], labels: ["Paper texture", "Off-white", "White", "Black"] }));
     if (p.slug !== "home") {
       const tools = document.createElement("div");
       tools.style.cssText = "display:flex;gap:6px;margin-top:12px";
@@ -485,6 +492,7 @@
     };
     const body = card.querySelector(".card-body");
     def.fields.forEach((f) => body.appendChild(fieldEl(b, f)));
+    body.appendChild(fieldEl(b, ANCHOR_FIELD));
     // Keep the card's one-line summary current while typing.
     body.addEventListener("input", () => { card.querySelector(".sum").textContent = def.summary(b) || ""; });
     return card;
@@ -517,7 +525,13 @@
     $("#page-select").innerHTML = content.pages.map((p) => `<option value="${esc(p.slug)}" ${p.slug === pageSlug ? "selected" : ""}>${esc(p.title)}${p.slug === "home" ? " (homepage)" : ""}</option>`).join("");
   }
   function updateLinksList() {
-    $("#links-list").innerHTML = content.pages.map((p) => `<option value="${esc(p.slug)}">${esc(p.title)}</option>`).join("");
+    const opts = [];
+    content.pages.forEach((p) => {
+      opts.push([p.slug, p.title]);
+      (p.blocks || []).forEach((b) => b.anchor && opts.push([`${p.slug}#${b.anchor}`, `${p.title}, ${b.anchor} section`]));
+    });
+    opts.push(["#top", "Top of the current page"]);
+    $("#links-list").innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join("");
   }
 
   function newPage(form) {
@@ -534,7 +548,7 @@
         { type: "gallery", columns: 2, images: [{ src: "", alt: "Mockup" }, { src: "", alt: "Mockup" }] },
         { type: "image", src: "", alt: "Wide mockup", width: "full" },
         { type: "gallery", columns: 3, images: [{ src: "", alt: "Detail" }, { src: "", alt: "Detail" }, { src: "", alt: "Detail" }] },
-        { type: "button", label: "← Back to all work", link: "work", align: "center" },
+        { type: "button", label: "← Back to works", link: "home#works", align: "center" },
       ];
     } else if (tpl === "text") {
       blocks = [{ type: "display", text: title, weight: 300, italic: false }, { type: "spacer", size: "m" }, { type: "text", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", size: "l" }];
@@ -545,7 +559,7 @@
       if (poster) (poster.tabs ||= []).push({ label: title, link: slug, x: 15 + Math.round(Math.random() * 70), y: 22 + Math.round(Math.random() * 60) });
     }
     if (form.list.checked) {
-      const ll = content.pages.find((p) => p.slug === "work")?.blocks.find((b) => b.type === "linklist");
+      const ll = content.pages.flatMap((p) => p.blocks || []).find((b) => b.type === "linklist");
       if (ll) ll.items.push({ label: title, link: slug });
     }
     pageSlug = slug;
@@ -565,9 +579,9 @@
     body.appendChild(fieldEl(s, { key: "title", label: "Site name (browser tab)", type: "text" }));
     body.insertAdjacentHTML("beforeend", `<h3>Fonts</h3><p>Type any font name from <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>. Each block can also pick its own font.</p>`);
     body.appendChild(fieldEl(s.fonts, { key: "body", label: "Body text", type: "font" }));
-    body.appendChild(fieldEl(s.fonts, { key: "heading", label: "Headings", type: "font" }));
+    body.appendChild(fieldEl(s.fonts, { key: "heading", label: "Headings (bold section titles)", type: "font" }));
     body.appendChild(fieldEl(s.fonts, { key: "display", label: "Display (the big PORTFOLIO title)", type: "font" }));
-    body.insertAdjacentHTML("beforeend", `<h3>Menu</h3><p>The small floating menu at the bottom of every page except the homepage.</p>`);
+    body.insertAdjacentHTML("beforeend", `<h3>Menu</h3><p>The floating menu at the bottom. On the homepage it appears once you scroll past the big title. A link can be a page, a section (home#works), #top, or a mailto: address.</p>`);
     body.appendChild(fieldEl(s.nav, { key: "show", label: "Show menu", type: "check" }));
     const navWrap = fieldEl(s.nav, { key: "items", label: "Menu links", type: "items", itemName: "Link", summary: (i) => i.label, make: () => ({ label: "Link", link: "home" }),
       fields: [{ key: "label", label: "Label", type: "text" }, { key: "link", label: "Goes to", type: "link" }] });

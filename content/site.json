@@ -4,23 +4,23 @@
     "description": "A collection of creative work.",
     "fonts": {
       "body": "Inter Tight",
-      "heading": "Inter Tight",
+      "heading": "Archivo Black",
       "display": "Archivo Black"
     },
     "nav": {
       "show": true,
       "items": [
         {
-          "label": "Home",
-          "link": "home"
+          "label": "Works",
+          "link": "home#works"
         },
         {
-          "label": "About",
-          "link": "about"
+          "label": "Contact me",
+          "link": "mailto:hello@example.com"
         },
         {
-          "label": "Work",
-          "link": "work"
+          "label": "Back to top",
+          "link": "#top"
         }
       ]
     }
@@ -46,48 +46,37 @@
             {
               "label": "Editorial Design",
               "link": "editorial-design",
-              "x": 12,
-              "y": 28
+              "x": 14,
+              "y": 27
             },
             {
               "label": "Social Media",
               "link": "social-media",
-              "x": 30,
-              "y": 33
+              "x": 31,
+              "y": 35
             },
             {
               "label": "Branding",
               "link": "branding",
-              "x": 67,
-              "y": 35
+              "x": 68,
+              "y": 34
             },
             {
               "label": "Event Graphics",
               "link": "event-graphics",
-              "x": 74,
-              "y": 76
-            },
-            {
-              "label": "About",
-              "link": "about",
-              "x": 20,
-              "y": 72
+              "x": 76,
+              "y": 74
             },
             {
               "label": "All Work",
-              "link": "work",
+              "link": "#works",
               "x": 84,
-              "y": 22
+              "y": 20
             }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "about",
-      "title": "About",
-      "theme": "light",
-      "blocks": [
+          ],
+          "scrollCue": "Scroll ↓",
+          "scrollCueLink": "#about"
+        },
         {
           "type": "columns",
           "columns": [
@@ -103,7 +92,9 @@
                     "000 000 0000",
                     "hello@example.com"
                   ],
-                  "muted": true
+                  "muted": true,
+                  "imageHolder": true,
+                  "imageAlt": "Photo"
                 }
               ]
             },
@@ -166,43 +157,36 @@
                 }
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "work",
-      "title": "Work",
-      "theme": "white",
-      "blocks": [
+          ],
+          "anchor": "about"
+        },
         {
           "type": "topbar",
           "left": "A collection of creative work for the bold & wonderful",
-          "right": "07 Apr, 2026"
+          "right": "07 Apr, 2026",
+          "anchor": "works"
         },
         {
           "type": "display",
-          "text": "What you will\nfind inside?",
-          "italic": true,
-          "weight": 300
+          "text": "What you will\nfind inside?"
         },
         {
           "type": "spacer",
-          "size": "l"
+          "size": "m"
         },
         {
           "type": "linklist",
           "items": [
             {
-              "label": "Brand Design",
+              "label": "Branding",
               "link": "branding"
             },
             {
-              "label": "Creative Direction",
+              "label": "Editorial Design",
               "link": "editorial-design"
             },
             {
-              "label": "Logo Design",
+              "label": "Social Media",
               "link": "social-media"
             },
             {
@@ -220,7 +204,7 @@
     {
       "slug": "branding",
       "title": "Branding",
-      "theme": "dark",
+      "theme": "paper",
       "blocks": [
         {
           "type": "project",
@@ -281,8 +265,8 @@
         },
         {
           "type": "button",
-          "label": "← Back to all work",
-          "link": "work",
+          "label": "← Back to works",
+          "link": "home#works",
           "align": "center"
         }
       ]
@@ -290,7 +274,7 @@
     {
       "slug": "editorial-design",
       "title": "Editorial Design",
-      "theme": "dark",
+      "theme": "paper",
       "blocks": [
         {
           "type": "project",
@@ -327,8 +311,8 @@
         },
         {
           "type": "button",
-          "label": "← Back to all work",
-          "link": "work",
+          "label": "← Back to works",
+          "link": "home#works",
           "align": "center"
         }
       ]
@@ -336,7 +320,7 @@
     {
       "slug": "social-media",
       "title": "Social Media",
-      "theme": "dark",
+      "theme": "paper",
       "blocks": [
         {
           "type": "project",
@@ -377,8 +361,8 @@
         },
         {
           "type": "button",
-          "label": "← Back to all work",
-          "link": "work",
+          "label": "← Back to works",
+          "link": "home#works",
           "align": "center"
         }
       ]
@@ -386,7 +370,7 @@
     {
       "slug": "event-graphics",
       "title": "Event Graphics",
-      "theme": "dark",
+      "theme": "paper",
       "blocks": [
         {
           "type": "project",
@@ -423,8 +407,8 @@
         },
         {
           "type": "button",
-          "label": "← Back to all work",
-          "link": "work",
+          "label": "← Back to works",
+          "link": "home#works",
           "align": "center"
         }
       ]
