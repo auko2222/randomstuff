@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practicum IV ID Mock</title>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--ink:#1d1d1b;--mute:#6b6a64;--line:#dedbd2;--accent:#2f6b4f;--accent-ink:#fff;--good:#2f7d32;--bad:#b3261e;--warn:#9a6a00;--soft:#eef3ef}
+@media (prefers-color-scheme:dark){:root{--bg:#151614;--card:#1f201e;--ink:#ecebe6;--mute:#a3a29b;--line:#34352f;--accent:#7cc39c;--accent-ink:#0f1a14;--good:#7cc58a;--bad:#ff8a80;--warn:#e7b84a;--soft:#22302a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.6rem;margin:.2em 0 .1em}
+.sub{color:var(--mute);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
+label.lbl{display:block;font-weight:600;margin-top:6px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;font:inherit}
+.chip[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button.main{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:12px 20px;font:600 1rem system-ui;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 14px;font:inherit;cursor:pointer}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;font-weight:600}
+.timer{font-variant-numeric:tabular-nums}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:12px}
+.bar>i{display:block;height:100%;background:var(--accent);width:100%}
+.bar.low>i{background:var(--bad)}
+.ph{background:#000;border-radius:10px;overflow:hidden;display:flex;justify-content:center;align-items:center;height:min(58vh,520px)}
+.ph img{max-width:100%;max-height:100%;object-fit:contain}
+.tag{font-size:.8rem;color:var(--mute);margin:6px 0 0}
+.q{font-weight:600;margin:14px 0 6px}
+input[type=text]{width:100%;font:inherit;font-size:1.1rem;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.hint{color:var(--mute);font-size:.85rem;margin-top:6px}
+.verdict{margin-top:12px;padding:12px 14px;border-radius:10px;background:var(--soft)}
+.verdict b.ok{color:var(--good)} .verdict b.no{color:var(--bad)} .verdict b.close{color:var(--warn)}
+.res{width:100%;border-collapse:collapse;margin-top:12px}
+.res td{border-top:1px solid var(--line);padding:8px 6px;vertical-align:middle}
+.res img{width:72px;height:56px;object-fit:cover;border-radius:6px;display:block}
+.res .ok{color:var(--good);font-weight:700} .res .no{color:var(--bad);font-weight:700}
+.big{font-size:2.4rem;font-weight:700;margin:.1em 0}
+.small{font-size:.85rem;color:var(--mute)}
+a{color:var(--accent)}
+.flex{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+@media (max-width:520px){.ph{height:46vh}.res img{width:56px;height:44px}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const DATA_URL='data.json';
+let DATA=[],S=null,timerId=null;
+const app=document.getElementById('app');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm=s=>s.toLowerCase().replace(/\(.*?\)/g,' ').replace(/[^a-z]/g,'');
+const normFull=s=>s.toLowerCase().replace(/[^a-z]/g,'');
+const EXTRA={'Western Diamondback':['western diamondback rattlesnake'],'Mohave Rattlesnake':['mojave rattlesnake'],'King Snake':['kingsnake'],'Tunicate':['sea squirt'],'Lancelet':['amphioxus'],'Great white shark':['white shark'],'Hammerhead shark':['hammerhead'],'Moray eel':['moray'],'Galapagos Tortoise':['galápagos tortoise']};
+function lev(a,b){const m=a.length,n=b.length;let p=[...Array(n+1).keys()];for(let i=1;i<=m;i++){let c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+function grade(ans,item){
+  const a=normFull(ans), a2=norm(ans); if(!a) return 'no';
+  const keys=[...item.acc,...(EXTRA[item.name]||[])].map(normFull).filter(Boolean);
+  if(keys.includes(a)||keys.includes(a2)) return 'ok';
+  for(const k of keys){const tol=k.length<=5?0:k.length<=9?1:2; if(lev(a,k)<=tol||lev(a2,k)<=tol) return 'close'}
+  return 'no';
+}
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=(o)=>{let s=null;try{s=JSON.parse(localStorage.getItem('p4idmock')||'null')}catch(e){}return Object.assign({sec:'both',n:'40',secs:'60',mode:'practice'},s||{},o||{})};
+let OPT=pick();
+function save(){try{localStorage.setItem('p4idmock',JSON.stringify(OPT))}catch(e){}}
+
+function setup(){
+  clearInterval(timerId);
+  const chips=(k,vals)=>vals.map(([v,l])=>`<button class="chip" data-k="${k}" data-v="${v}" aria-pressed="${OPT[k]===v}">${l}</button>`).join('');
+  const nf=DATA.filter(d=>d.sec==='fish').length,na=DATA.length-nf;
+  app.innerHTML=`<h1>Practicum IV ID Mock</h1>
+  <p class="sub">Specimen ID only: you see a photo, you type its name. Names follow the printed Practicum IV guide. ${DATA.length} specimens (${nf} fish, ${na} amphibians &amp; reptiles).</p>
+  <div class="card">
+   <label class="lbl">Which lab</label><div class="row">${chips('sec',[['both','Both'],['fish','Lab 7: Chordates to fish'],['ar','Lab 8: Amphibians &amp; reptiles']])}</div>
+   <label class="lbl">Stations</label><div class="row">${chips('n',[['20','20'],['40','40'],['all','All']])}</div>
+   <label class="lbl">Time per station</label><div class="row">${chips('secs',[['30','30 s'],['45','45 s'],['60','60 s'],['90','90 s'],['0','No timer']])}</div>
+   <label class="lbl">Mode</label><div class="row">${chips('mode',[['practice','Practice: answer shown after each station'],['exam','Exam: answers shown at the end']])}</div>
+   <button class="main" id="go">Start mock</button>
+   <p class="hint">Press Enter to submit and Enter again to go to the next station. When time runs out, the station locks and moves on. Spelling that's off by a letter or two counts but gets flagged, and you can override any grade.</p>
+  </div>
+  <p class="small" style="margin-top:18px">Unofficial study aid made from a student's own lab photos. Photos marked "Picture from lab guide" are specimens that weren't photographed in lab. ID only, no anatomy or trait questions.</p>`;
+  app.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{OPT[b.dataset.k]=b.dataset.v;save();setup()});
+  document.getElementById('go').onclick=start;
+}
+function start(){
+  let pool=DATA.filter(d=>OPT.sec==='both'||d.sec===OPT.sec);
+  pool=shuffle(pool.slice()); if(OPT.n!=='all') pool=pool.slice(0,+OPT.n);
+  S={q:pool.map(it=>({it,photo:it.photos[Math.random()*it.photos.length|0],ans:'',g:null,timedOut:false})),i:0,phase:'ask'};
+  ask();
+}
+function preload(i){const x=S.q[i];if(x){const im=new Image();im.src='img/'+x.photo.f}}
+function ask(){
+  const x=S.q[S.i]; S.phase='ask'; const secs=+OPT.secs; let left=secs;
+  app.innerHTML=`<div class="top"><span>Station ${S.i+1} of ${S.q.length}</span><span class="timer" id="t">${secs?left+' s':''}</span></div>
+  ${secs?'<div class="bar" id="bar"><i id="bi"></i></div>':''}
+  <div class="card"><div class="ph"><img src="img/${x.photo.f}" alt="Specimen photo for station ${S.i+1}"></div>
+  ${x.photo.guide?'<p class="tag">Picture from lab guide</p>':''}
+  <p class="q">What is the name of this specimen?</p>
+  <input type="text" id="a" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type the name, then press Enter">
+  <div class="flex"><button class="main" id="sub">Submit</button><button class="ghost" id="quit">End mock</button></div></div>`;
+  preload(S.i+1);
+  const inp=document.getElementById('a'); inp.focus();
+  document.getElementById('sub').onclick=()=>submit(false);
+  document.getElementById('quit').onclick=()=>{S.q=S.q.slice(0,S.i);clearInterval(timerId);S.q.length?results():setup()};
+  clearInterval(timerId);
+  if(secs){const t0=Date.now();timerId=setInterval(()=>{left=Math.max(0,secs-Math.floor((Date.now()-t0)/1000));
+    const el=document.getElementById('t'),bi=document.getElementById('bi'),bar=document.getElementById('bar');
+    if(el)el.textContent=left+' s'; if(bi)bi.style.width=(100*(secs-(Date.now()-t0)/1000)/secs)+'%'; if(bar)bar.classList.toggle('low',left<=10);
+    if(left<=0)submit(true)},200)}
+}
+function submit(timedOut){
+  if(S.phase!=='ask')return; clearInterval(timerId);
+  const x=S.q[S.i]; x.ans=(document.getElementById('a')||{}).value||''; x.timedOut=timedOut; x.g=grade(x.ans,x.it);
+  if(OPT.mode==='exam'){next();return}
+  S.phase='reveal';
+  const v=document.createElement('div'); v.className='verdict'; v.id='v'; renderVerdict(v,x);
+  document.querySelector('.card').appendChild(v);
+  document.getElementById('a').disabled=true;
+  const sub=document.getElementById('sub'); sub.textContent=S.i+1<S.q.length?'Next station':'See results'; sub.onclick=next; sub.focus();
+}
+function renderVerdict(v,x){
+  const lab={ok:'<b class="ok">Correct</b>',close:'<b class="close">Counted correct, check spelling</b>',no:'<b class="no">Incorrect</b>'}[x.g];
+  v.innerHTML=`${lab}${x.timedOut?' (time ran out)':''}<br>Answer: <b>${esc(x.it.name)}</b><br><span class="small">You typed: ${x.ans?esc(x.ans):'(nothing)'} · Lab ${x.it.sec==='fish'?'7':'8'}, guide station ${x.it.st}</span>
+  <div class="flex"><button class="ghost" id="ov">${x.g==='no'?'I was right, count it':'Count it wrong'}</button></div>`;
+  v.querySelector('#ov').onclick=()=>{x.g=x.g==='no'?'ok':'no';renderVerdict(v,x);document.getElementById('sub').focus()};
+}
+function next(){S.i++; if(S.i<S.q.length)ask(); else results()}
+function results(){
+  clearInterval(timerId); S.phase='done';
+  const right=S.q.filter(x=>x.g!=='no').length, pct=Math.round(100*right/S.q.length);
+  app.innerHTML=`<h1>Results</h1><div class="card"><div class="big">${right} / ${S.q.length} (${pct}%)</div>
+  <div class="flex"><button class="main" id="again">New mock</button>${right<S.q.length?'<button class="ghost" id="miss">Redo the ones I missed</button>':''}</div>
+  <table class="res">${S.q.map((x,k)=>`<tr><td><img src="img/${x.photo.f}" alt=""></td><td><span class="${x.g==='no'?'no':'ok'}">${x.g==='no'?'✗':'✓'}</span> <b>${esc(x.it.name)}</b><br><span class="small">You: ${x.ans?esc(x.ans):'(nothing)'}${x.timedOut?' · time ran out':''}${x.g==='close'?' · check spelling':''}</span></td><td><button class="ghost" data-k="${k}">${x.g==='no'?'Count right':'Count wrong'}</button></td></tr>`).join('')}</table></div>`;
+  document.getElementById('again').onclick=setup;
+  const m=document.getElementById('miss'); if(m)m.onclick=()=>{S={q:shuffle(S.q.filter(x=>x.g==='no').map(x=>({it:x.it,photo:x.it.photos[Math.random()*x.it.photos.length|0],ans:'',g:null}))),i:0};ask()};
+  app.querySelectorAll('.res button').forEach(b=>b.onclick=()=>{const x=S.q[+b.dataset.k];x.g=x.g==='no'?'ok':'no';results()});
+}
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Enter'||!S)return;
+  if(S.phase==='ask'&&document.activeElement&&document.activeElement.id==='a'){e.preventDefault();submit(false)}
+  else if(S.phase==='reveal'){e.preventDefault();next()}
+});
+fetch(DATA_URL).then(r=>r.json()).then(d=>{DATA=d;setup()}).catch(()=>{app.innerHTML='<p>Could not load the specimen list. Reload the page.</p>'});
+</script>
+</body>
+</html>

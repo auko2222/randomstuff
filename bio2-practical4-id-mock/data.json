@@ -1,0 +1,2312 @@
+[
+{
+"name": "Tunicate",
+"acc": [
+"tunicate"
+],
+"sec": "fish",
+"st": 2,
+"photos": [
+{
+"f": "p000.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Lancelet",
+"acc": [
+"lancelet"
+],
+"sec": "fish",
+"st": 3,
+"photos": [
+{
+"f": "p001.jpg",
+"guide": false
+},
+{
+"f": "p002.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Hagfish",
+"acc": [
+"hagfish"
+],
+"sec": "fish",
+"st": 8,
+"photos": [
+{
+"f": "p007.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Lamprey",
+"acc": [
+"lamprey"
+],
+"sec": "fish",
+"st": 9,
+"photos": [
+{
+"f": "p008.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Lamprey (ammocoetes larva)",
+"acc": [
+"ammocoete",
+"ammocoetes",
+"ammocoetes larva",
+"lamprey",
+"lamprey (ammocoetes larva)",
+"lamprey larva"
+],
+"sec": "fish",
+"st": 9,
+"photos": [
+{
+"f": "p083.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Dogfish shark",
+"acc": [
+"dogfish shark"
+],
+"sec": "fish",
+"st": 11,
+"photos": [
+{
+"f": "p009.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Great white shark",
+"acc": [
+"great white shark"
+],
+"sec": "fish",
+"st": 12,
+"photos": [
+{
+"f": "p010.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Hammerhead shark",
+"acc": [
+"hammerhead shark"
+],
+"sec": "fish",
+"st": 12,
+"photos": [
+{
+"f": "p011.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Leopard shark",
+"acc": [
+"leopard shark"
+],
+"sec": "fish",
+"st": 12,
+"photos": [
+{
+"f": "p012.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Whale shark",
+"acc": [
+"whale shark"
+],
+"sec": "fish",
+"st": 12,
+"photos": [
+{
+"f": "p013.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Big skate",
+"acc": [
+"big skate"
+],
+"sec": "fish",
+"st": 14,
+"photos": [
+{
+"f": "p014.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Bat ray",
+"acc": [
+"bat ray"
+],
+"sec": "fish",
+"st": 15,
+"photos": [
+{
+"f": "p016.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Manta ray",
+"acc": [
+"manta ray"
+],
+"sec": "fish",
+"st": 15,
+"photos": [
+{
+"f": "p017.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Round ray",
+"acc": [
+"round ray"
+],
+"sec": "fish",
+"st": 15,
+"photos": [
+{
+"f": "p015.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Stingray",
+"acc": [
+"sting ray",
+"stingray"
+],
+"sec": "fish",
+"st": 15,
+"photos": [
+{
+"f": "p018.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Sawfish",
+"acc": [
+"sawfish"
+],
+"sec": "fish",
+"st": 16,
+"photos": [
+{
+"f": "p021.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Shovelnose guitarfish",
+"acc": [
+"shovelnose guitarfish"
+],
+"sec": "fish",
+"st": 16,
+"photos": [
+{
+"f": "p019.jpg",
+"guide": false
+},
+{
+"f": "p020.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Chimaera (ratfish)",
+"acc": [
+"chimaera",
+"chimaera (ratfish)",
+"chimera",
+"ratfish"
+],
+"sec": "fish",
+"st": 17,
+"photos": [
+{
+"f": "p022.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Coelacanth",
+"acc": [
+"coelacanth"
+],
+"sec": "fish",
+"st": 19,
+"photos": [
+{
+"f": "p027.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Lungfish",
+"acc": [
+"lungfish"
+],
+"sec": "fish",
+"st": 19,
+"photos": [
+{
+"f": "p024.jpg",
+"guide": false
+},
+{
+"f": "p025.jpg",
+"guide": false
+},
+{
+"f": "p026.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Paddlefish",
+"acc": [
+"paddlefish"
+],
+"sec": "fish",
+"st": 20,
+"photos": [
+{
+"f": "p084.jpg",
+"guide": true
+},
+{
+"f": "p085.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Sturgeon",
+"acc": [
+"sturgeon"
+],
+"sec": "fish",
+"st": 20,
+"photos": [
+{
+"f": "p028.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Bowfin",
+"acc": [
+"bowfin"
+],
+"sec": "fish",
+"st": 21,
+"photos": [
+{
+"f": "p086.jpg",
+"guide": true
+},
+{
+"f": "p087.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Gar",
+"acc": [
+"gar"
+],
+"sec": "fish",
+"st": 21,
+"photos": [
+{
+"f": "p029.jpg",
+"guide": false
+},
+{
+"f": "p030.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Arowana",
+"acc": [
+"arowana"
+],
+"sec": "fish",
+"st": 23,
+"photos": [
+{
+"f": "p032.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Elephant fish",
+"acc": [
+"elephant fish"
+],
+"sec": "fish",
+"st": 23,
+"photos": [
+{
+"f": "p074.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Moray eel",
+"acc": [
+"moray eel"
+],
+"sec": "fish",
+"st": 24,
+"photos": [
+{
+"f": "p033.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Northern anchovy",
+"acc": [
+"northern anchovy"
+],
+"sec": "fish",
+"st": 25,
+"photos": [
+{
+"f": "p088.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Pacific sardine",
+"acc": [
+"pacific sardine"
+],
+"sec": "fish",
+"st": 25,
+"photos": [
+{
+"f": "p034.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Catfish",
+"acc": [
+"catfish"
+],
+"sec": "fish",
+"st": 26,
+"photos": [
+{
+"f": "p037.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Goldfish",
+"acc": [
+"goldfish"
+],
+"sec": "fish",
+"st": 26,
+"photos": [
+{
+"f": "p035.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Knifefish",
+"acc": [
+"knifefish",
+"knife fish"
+],
+"sec": "fish",
+"st": 26,
+"photos": [
+{
+"f": "p038.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Piranha",
+"acc": [
+"piranha"
+],
+"sec": "fish",
+"st": 26,
+"photos": [
+{
+"f": "p036.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Brown trout",
+"acc": [
+"brown trout"
+],
+"sec": "fish",
+"st": 27,
+"photos": [
+{
+"f": "p089.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Lake trout",
+"acc": [
+"lake trout"
+],
+"sec": "fish",
+"st": 27,
+"photos": [
+{
+"f": "p090.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Pike",
+"acc": [
+"pike"
+],
+"sec": "fish",
+"st": 27,
+"photos": [
+{
+"f": "p041.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Rainbow trout",
+"acc": [
+"rainbow trout"
+],
+"sec": "fish",
+"st": 27,
+"photos": [
+{
+"f": "p040.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Salmon",
+"acc": [
+"salmon"
+],
+"sec": "fish",
+"st": 27,
+"photos": [
+{
+"f": "p039.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Delta smelt",
+"acc": [
+"delta smelt"
+],
+"sec": "fish",
+"st": 28,
+"photos": [
+{
+"f": "p092.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Dragonfish",
+"acc": [
+"dragonfish",
+"dragon fish"
+],
+"sec": "fish",
+"st": 28,
+"photos": [
+{
+"f": "p043.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Hatchetfish",
+"acc": [
+"hatchetfish",
+"hatchet fish"
+],
+"sec": "fish",
+"st": 28,
+"photos": [
+{
+"f": "p042.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Lanternfish",
+"acc": [
+"lanternfish",
+"lantern fish"
+],
+"sec": "fish",
+"st": 29,
+"photos": [
+{
+"f": "p044.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Mullet",
+"acc": [
+"mullet"
+],
+"sec": "fish",
+"st": 31,
+"photos": [
+{
+"f": "p045.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "California grunion",
+"acc": [
+"california grunion"
+],
+"sec": "fish",
+"st": 32,
+"photos": [
+{
+"f": "p046.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Flying fish",
+"acc": [
+"flying fish",
+"flyingfish"
+],
+"sec": "fish",
+"st": 33,
+"photos": [
+{
+"f": "p047.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Desert pupfish",
+"acc": [
+"desert pupfish"
+],
+"sec": "fish",
+"st": 34,
+"photos": [
+{
+"f": "p048.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Mosquitofish",
+"acc": [
+"mosquitofish",
+"mosquito fish"
+],
+"sec": "fish",
+"st": 34,
+"photos": [
+{
+"f": "p049.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Ridgehead",
+"acc": [
+"ridgehead"
+],
+"sec": "fish",
+"st": 35,
+"photos": [
+{
+"f": "p050.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Clingfish",
+"acc": [
+"clingfish"
+],
+"sec": "fish",
+"st": 36,
+"photos": [
+{
+"f": "p051.jpg",
+"guide": false
+},
+{
+"f": "p052.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Pipefish",
+"acc": [
+"pipefish",
+"pipe fish"
+],
+"sec": "fish",
+"st": 37,
+"photos": [
+{
+"f": "p054.jpg",
+"guide": false
+},
+{
+"f": "p055.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Seahorse",
+"acc": [
+"seahorse",
+"sea horse"
+],
+"sec": "fish",
+"st": 37,
+"photos": [
+{
+"f": "p053.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Halibut",
+"acc": [
+"halibut"
+],
+"sec": "fish",
+"st": 38,
+"photos": [
+{
+"f": "p056.jpg",
+"guide": false
+},
+{
+"f": "p057.jpg",
+"guide": false
+},
+{
+"f": "p058.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Chub mackerel",
+"acc": [
+"chub mackerel"
+],
+"sec": "fish",
+"st": 39,
+"photos": [
+{
+"f": "p059.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Tuna",
+"acc": [
+"tuna"
+],
+"sec": "fish",
+"st": 39,
+"photos": [
+{
+"f": "p060.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Wahoo",
+"acc": [
+"wahoo"
+],
+"sec": "fish",
+"st": 39,
+"photos": [
+{
+"f": "p096.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Rockfish",
+"acc": [
+"rockfish",
+"rock fish"
+],
+"sec": "fish",
+"st": 40,
+"photos": [
+{
+"f": "p064.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Scorpionfish",
+"acc": [
+"scorpionfish",
+"scorpion fish"
+],
+"sec": "fish",
+"st": 40,
+"photos": [
+{
+"f": "p080.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Sculpin",
+"acc": [
+"sculpin"
+],
+"sec": "fish",
+"st": 40,
+"photos": [
+{
+"f": "p061.jpg",
+"guide": false
+},
+{
+"f": "p062.jpg",
+"guide": false
+},
+{
+"f": "p063.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Barred surfperch",
+"acc": [
+"barred surfperch"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p079.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "California sheephead",
+"acc": [
+"california sheephead"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p093.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Clownfish",
+"acc": [
+"clownfish",
+"clown fish"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p069.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Damselfish",
+"acc": [
+"damselfish",
+"damsel fish"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p068.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Largemouth bass",
+"acc": [
+"largemouth bass"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p097.jpg",
+"guide": true
+},
+{
+"f": "p098.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Marlin",
+"acc": [
+"marlin"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p094.jpg",
+"guide": true
+},
+{
+"f": "p095.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Opaleye",
+"acc": [
+"opaleye"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p077.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Perch",
+"acc": [
+"perch"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p078.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Sailfish",
+"acc": [
+"sailfish"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p099.jpg",
+"guide": true
+},
+{
+"f": "p100.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Stickleback",
+"acc": [
+"stickleback"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p066.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Surfperch",
+"acc": [
+"surfperch"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p065.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Wrasse",
+"acc": [
+"wrasse"
+],
+"sec": "fish",
+"st": 41,
+"photos": [
+{
+"f": "p067.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Cowfish",
+"acc": [
+"cowfish",
+"cow fish"
+],
+"sec": "fish",
+"st": 42,
+"photos": [
+{
+"f": "p071.jpg",
+"guide": false
+},
+{
+"f": "p073.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Mola mola (ocean sunfish)",
+"acc": [
+"mola",
+"mola mola",
+"mola mola (ocean sunfish)",
+"ocean sunfish",
+"sunfish"
+],
+"sec": "fish",
+"st": 42,
+"photos": [
+{
+"f": "p072.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Porcupine fish",
+"acc": [
+"porcupine fish",
+"porcupinefish"
+],
+"sec": "fish",
+"st": 42,
+"photos": [
+{
+"f": "p070.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "California Newt",
+"acc": [
+"california newt"
+],
+"sec": "ar",
+"st": 9,
+"photos": [
+{
+"f": "p101.jpg",
+"guide": false
+},
+{
+"f": "p102.jpg",
+"guide": false
+},
+{
+"f": "p103.jpg",
+"guide": false
+},
+{
+"f": "p104.jpg",
+"guide": false
+},
+{
+"f": "p105.jpg",
+"guide": false
+},
+{
+"f": "p106.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Ensatina",
+"acc": [
+"ensatina"
+],
+"sec": "ar",
+"st": 10,
+"photos": [
+{
+"f": "p107.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "California Slender Salamander",
+"acc": [
+"california slender salamander"
+],
+"sec": "ar",
+"st": 11,
+"photos": [
+{
+"f": "p108.jpg",
+"guide": false
+},
+{
+"f": "p109.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Caecilian (Order Apodans)",
+"acc": [
+"apodans",
+"caecilian",
+"caecilian (order apodans)"
+],
+"sec": "ar",
+"st": 12,
+"photos": [
+{
+"f": "p224.jpg",
+"guide": true
+},
+{
+"f": "p225.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Western Spadefoot Toad",
+"acc": [
+"western spadefoot toad"
+],
+"sec": "ar",
+"st": 19,
+"photos": [
+{
+"f": "p110.jpg",
+"guide": false
+},
+{
+"f": "p111.jpg",
+"guide": false
+},
+{
+"f": "p112.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Red-Spotted Toad",
+"acc": [
+"red-spotted toad"
+],
+"sec": "ar",
+"st": 20,
+"photos": [
+{
+"f": "p113.jpg",
+"guide": false
+},
+{
+"f": "p114.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Toad",
+"acc": [
+"western toad"
+],
+"sec": "ar",
+"st": 21,
+"photos": [
+{
+"f": "p115.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "California Tree Frog",
+"acc": [
+"california tree frog"
+],
+"sec": "ar",
+"st": 22,
+"photos": [
+{
+"f": "p117.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Pacific Tree Frog",
+"acc": [
+"pacific tree frog"
+],
+"sec": "ar",
+"st": 23,
+"photos": [
+{
+"f": "p120.jpg",
+"guide": false
+},
+{
+"f": "p121.jpg",
+"guide": false
+},
+{
+"f": "p122.jpg",
+"guide": false
+},
+{
+"f": "p123.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "American Bullfrog",
+"acc": [
+"american bullfrog"
+],
+"sec": "ar",
+"st": 24,
+"photos": [
+{
+"f": "p125.jpg",
+"guide": false
+},
+{
+"f": "p126.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Turtle (Class Testudines)",
+"acc": [
+"testudines",
+"turtle",
+"turtle (class testudines)"
+],
+"sec": "ar",
+"st": 30,
+"photos": [
+{
+"f": "p127.jpg",
+"guide": false
+},
+{
+"f": "p128.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Green Sea Turtle",
+"acc": [
+"green sea turtle"
+],
+"sec": "ar",
+"st": 34,
+"photos": [
+{
+"f": "p132.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Leatherback Sea Turtle",
+"acc": [
+"leatherback sea turtle"
+],
+"sec": "ar",
+"st": 35,
+"photos": [
+{
+"f": "p226.jpg",
+"guide": true
+},
+{
+"f": "p227.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Desert Tortoise",
+"acc": [
+"desert tortoise"
+],
+"sec": "ar",
+"st": 36,
+"photos": [
+{
+"f": "p133.jpg",
+"guide": false
+},
+{
+"f": "p134.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Pond Turtle",
+"acc": [
+"western pond turtle"
+],
+"sec": "ar",
+"st": 37,
+"photos": [
+{
+"f": "p135.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Red-eared Slider",
+"acc": [
+"red-eared slider"
+],
+"sec": "ar",
+"st": 38,
+"photos": [
+{
+"f": "p136.jpg",
+"guide": false
+},
+{
+"f": "p137.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Galapagos Tortoise",
+"acc": [
+"galapagos tortoise"
+],
+"sec": "ar",
+"st": 39,
+"photos": [
+{
+"f": "p138.jpg",
+"guide": false
+},
+{
+"f": "p139.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Mata Mata",
+"acc": [
+"mata mata",
+"mata mata turtle",
+"matamata"
+],
+"sec": "ar",
+"st": 40,
+"photos": [
+{
+"f": "p142.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Spiny Softshell Turtle",
+"acc": [
+"soft shelled turtle",
+"softshell turtle",
+"spiny soft shelled turtle",
+"spiny softshell",
+"spiny softshell turtle",
+"spiny softshelled turtle"
+],
+"sec": "ar",
+"st": 40,
+"photos": [
+{
+"f": "p140.jpg",
+"guide": false
+},
+{
+"f": "p141.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Tuatara (Class Sphenodontia)",
+"acc": [
+"sphenodontia",
+"tuatara",
+"tuatara (class sphenodontia)"
+],
+"sec": "ar",
+"st": 41,
+"photos": [
+{
+"f": "p143.jpg",
+"guide": false
+},
+{
+"f": "p144.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Bearded dragon (Family Agamidae)",
+"acc": [
+"agamidae",
+"bearded dragon",
+"bearded dragon (family agamidae)"
+],
+"sec": "ar",
+"st": 45,
+"photos": [
+{
+"f": "p228.jpg",
+"guide": true
+},
+{
+"f": "p229.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Chameleon (Family Chameleonidae)",
+"acc": [
+"chameleon",
+"chameleon (family chameleonidae)",
+"chameleonidae"
+],
+"sec": "ar",
+"st": 46,
+"photos": [
+{
+"f": "p145.jpg",
+"guide": false
+},
+{
+"f": "p146.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Anole (Family Polychrotidae)",
+"acc": [
+"anole",
+"anole (family polychrotidae)",
+"polychrotidae"
+],
+"sec": "ar",
+"st": 47,
+"photos": [
+{
+"f": "p147.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Gecko (Family Geckonidae)",
+"acc": [
+"gecko",
+"gecko (family geckonidae)",
+"geckonidae"
+],
+"sec": "ar",
+"st": 48,
+"photos": [
+{
+"f": "p148.jpg",
+"guide": false
+},
+{
+"f": "p149.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Helmet lizard (Family Corytophanidae)",
+"acc": [
+"corytophanidae",
+"helmet lizard",
+"helmet lizard (family corytophanidae)"
+],
+"sec": "ar",
+"st": 49,
+"photos": [
+{
+"f": "p150.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Skink (Family Scincidae)",
+"acc": [
+"scincidae",
+"skink",
+"skink (family scincidae)"
+],
+"sec": "ar",
+"st": 50,
+"photos": [
+{
+"f": "p151.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Skink",
+"acc": [
+"western skink"
+],
+"sec": "ar",
+"st": 51,
+"photos": [
+{
+"f": "p152.jpg",
+"guide": false
+},
+{
+"f": "p153.jpg",
+"guide": false
+},
+{
+"f": "p154.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Chuckwalla",
+"acc": [
+"chuckwalla"
+],
+"sec": "ar",
+"st": 53,
+"photos": [
+{
+"f": "p155.jpg",
+"guide": false
+},
+{
+"f": "p156.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Desert Iguana",
+"acc": [
+"desert iguana"
+],
+"sec": "ar",
+"st": 54,
+"photos": [
+{
+"f": "p157.jpg",
+"guide": false
+},
+{
+"f": "p158.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Green Iguana",
+"acc": [
+"green iguana"
+],
+"sec": "ar",
+"st": 55,
+"photos": [
+{
+"f": "p159.jpg",
+"guide": false
+},
+{
+"f": "p160.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Marine Iguana",
+"acc": [
+"marine iguana"
+],
+"sec": "ar",
+"st": 56,
+"photos": [
+{
+"f": "p230.jpg",
+"guide": true
+},
+{
+"f": "p231.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Zebra-tailed Lizard",
+"acc": [
+"zebra-tailed lizard"
+],
+"sec": "ar",
+"st": 58,
+"photos": [
+{
+"f": "p161.jpg",
+"guide": false
+},
+{
+"f": "p163.jpg",
+"guide": false
+},
+{
+"f": "p164.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Fence Lizard",
+"acc": [
+"western fence lizard"
+],
+"sec": "ar",
+"st": 59,
+"photos": [
+{
+"f": "p165.jpg",
+"guide": false
+},
+{
+"f": "p166.jpg",
+"guide": false
+},
+{
+"f": "p167.jpg",
+"guide": false
+},
+{
+"f": "p168.jpg",
+"guide": false
+},
+{
+"f": "p169.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Side-blotched Lizard",
+"acc": [
+"side-blotched lizard"
+],
+"sec": "ar",
+"st": 60,
+"photos": [
+{
+"f": "p170.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Horned Lizard",
+"acc": [
+"horned lizard"
+],
+"sec": "ar",
+"st": 61,
+"photos": [
+{
+"f": "p171.jpg",
+"guide": false
+},
+{
+"f": "p172.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Southern Alligator Lizard",
+"acc": [
+"southern alligator lizard"
+],
+"sec": "ar",
+"st": 62,
+"photos": [
+{
+"f": "p174.jpg",
+"guide": false
+},
+{
+"f": "p175.jpg",
+"guide": false
+},
+{
+"f": "p176.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "California Legless Lizard",
+"acc": [
+"california legless lizard"
+],
+"sec": "ar",
+"st": 63,
+"photos": [
+{
+"f": "p178.jpg",
+"guide": false
+},
+{
+"f": "p179.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Blunt-nosed Leopard Lizard",
+"acc": [
+"blunt-nosed leopard lizard"
+],
+"sec": "ar",
+"st": 64,
+"photos": [
+{
+"f": "p232.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Western Whiptail Lizard",
+"acc": [
+"western whiptail lizard"
+],
+"sec": "ar",
+"st": 65,
+"photos": [
+{
+"f": "p181.jpg",
+"guide": false
+},
+{
+"f": "p182.jpg",
+"guide": false
+},
+{
+"f": "p183.jpg",
+"guide": false
+},
+{
+"f": "p184.jpg",
+"guide": false
+},
+{
+"f": "p185.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Gila monster (Family Helodermatidae)",
+"acc": [
+"gila monster",
+"gila monster (family helodermatidae)",
+"helodermatidae"
+],
+"sec": "ar",
+"st": 66,
+"photos": [
+{
+"f": "p186.jpg",
+"guide": false
+},
+{
+"f": "p187.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Komodo Dragon",
+"acc": [
+"komodo dragon"
+],
+"sec": "ar",
+"st": 67,
+"photos": [
+{
+"f": "p188.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "King Cobra",
+"acc": [
+"king cobra"
+],
+"sec": "ar",
+"st": 71,
+"photos": [
+{
+"f": "p190.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Taipan",
+"acc": [
+"taipan"
+],
+"sec": "ar",
+"st": 72,
+"photos": [
+{
+"f": "p233.jpg",
+"guide": true
+},
+{
+"f": "p234.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Sea Snake",
+"acc": [
+"sea snake"
+],
+"sec": "ar",
+"st": 73,
+"photos": [
+{
+"f": "p235.jpg",
+"guide": true
+},
+{
+"f": "p236.jpg",
+"guide": true
+},
+{
+"f": "p237.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Rosy Boa",
+"acc": [
+"rosy boa"
+],
+"sec": "ar",
+"st": 75,
+"photos": [
+{
+"f": "p238.jpg",
+"guide": true
+},
+{
+"f": "p239.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Green Anaconda",
+"acc": [
+"green anaconda"
+],
+"sec": "ar",
+"st": 76,
+"photos": [
+{
+"f": "p240.jpg",
+"guide": true
+},
+{
+"f": "p241.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Rock Python",
+"acc": [
+"rock python"
+],
+"sec": "ar",
+"st": 78,
+"photos": [
+{
+"f": "p242.jpg",
+"guide": true
+},
+{
+"f": "p243.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Ring-necked Snake",
+"acc": [
+"ring-necked snake"
+],
+"sec": "ar",
+"st": 80,
+"photos": [
+{
+"f": "p191.jpg",
+"guide": false
+},
+{
+"f": "p192.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Coachwhip",
+"acc": [
+"coachwhip"
+],
+"sec": "ar",
+"st": 81,
+"photos": [
+{
+"f": "p193.jpg",
+"guide": false
+},
+{
+"f": "p194.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Shovel-nosed Snake",
+"acc": [
+"western shovel-nosed snake"
+],
+"sec": "ar",
+"st": 82,
+"photos": [
+{
+"f": "p195.jpg",
+"guide": false
+},
+{
+"f": "p196.jpg",
+"guide": false
+},
+{
+"f": "p197.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "King Snake",
+"acc": [
+"king snake"
+],
+"sec": "ar",
+"st": 83,
+"photos": [
+{
+"f": "p198.jpg",
+"guide": false
+},
+{
+"f": "p199.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Gopher Snake",
+"acc": [
+"gopher snake"
+],
+"sec": "ar",
+"st": 84,
+"photos": [
+{
+"f": "p200.jpg",
+"guide": false
+},
+{
+"f": "p201.jpg",
+"guide": false
+},
+{
+"f": "p202.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Rattlesnake (Family Viperidae)",
+"acc": [
+"rattlesnake",
+"rattlesnake (family viperidae)",
+"viperidae"
+],
+"sec": "ar",
+"st": 85,
+"photos": [
+{
+"f": "p203.jpg",
+"guide": false
+},
+{
+"f": "p204.jpg",
+"guide": false
+},
+{
+"f": "p205.jpg",
+"guide": false
+},
+{
+"f": "p206.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Diamondback",
+"acc": [
+"western diamondback"
+],
+"sec": "ar",
+"st": 86,
+"photos": [
+{
+"f": "p207.jpg",
+"guide": false
+},
+{
+"f": "p208.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Red Diamond Rattlesnake",
+"acc": [
+"red diamond rattlesnake"
+],
+"sec": "ar",
+"st": 87,
+"photos": [
+{
+"f": "p209.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Speckled Rattlesnake",
+"acc": [
+"speckled rattlesnake"
+],
+"sec": "ar",
+"st": 88,
+"photos": [
+{
+"f": "p210.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Western Rattlesnake",
+"acc": [
+"western rattlesnake"
+],
+"sec": "ar",
+"st": 89,
+"photos": [
+{
+"f": "p211.jpg",
+"guide": false
+},
+{
+"f": "p212.jpg",
+"guide": false
+},
+{
+"f": "p213.jpg",
+"guide": false
+},
+{
+"f": "p214.jpg",
+"guide": false
+},
+{
+"f": "p215.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Sidewinder",
+"acc": [
+"sidewinder"
+],
+"sec": "ar",
+"st": 90,
+"photos": [
+{
+"f": "p216.jpg",
+"guide": false
+},
+{
+"f": "p217.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Mohave Rattlesnake",
+"acc": [
+"mohave rattlesnake"
+],
+"sec": "ar",
+"st": 91,
+"photos": [
+{
+"f": "p244.jpg",
+"guide": true
+},
+{
+"f": "p245.jpg",
+"guide": true
+}
+]
+},
+{
+"name": "Alligator",
+"acc": [
+"alligator"
+],
+"sec": "ar",
+"st": 93,
+"photos": [
+{
+"f": "p222.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Caiman",
+"acc": [
+"caiman"
+],
+"sec": "ar",
+"st": 93,
+"photos": [
+{
+"f": "p223.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Crocodile",
+"acc": [
+"crocodile"
+],
+"sec": "ar",
+"st": 93,
+"photos": [
+{
+"f": "p218.jpg",
+"guide": false
+},
+{
+"f": "p219.jpg",
+"guide": false
+},
+{
+"f": "p221.jpg",
+"guide": false
+}
+]
+},
+{
+"name": "Gavial (gharial)",
+"acc": [
+"gavial",
+"gavial (gharial)",
+"gharial"
+],
+"sec": "ar",
+"st": 93,
+"photos": [
+{
+"f": "p220.jpg",
+"guide": false
+}
+]
+}
+]
